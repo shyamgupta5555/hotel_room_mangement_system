@@ -67,7 +67,7 @@ exports.login = async (req, res) => {
 
     const token = jwt.sign(
       { id: check._id, name: check.firstName + check.lastName },
-      "travelApplication",
+      "hotelApplication",
       { expiresIn: "1h" }
     );
     const obj = { id: check.id, token: token, expireToken: "1h" };

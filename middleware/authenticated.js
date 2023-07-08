@@ -6,7 +6,7 @@ exports.auth1 = async (req, res) => {
     let header = req.headers["authorization"];
     if (!header)
       return res.status(400).send({ message: "jwt must be provided" });
-    jwt.verify(header, "travelApplication", (err, decode) => {
+    jwt.verify(header, "hotelApplication", (err, decode) => {
       if (err)
         return res.status(401).send({ status: false, message: err.message });
       req.id = decode.id;
