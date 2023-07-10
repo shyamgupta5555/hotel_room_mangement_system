@@ -6,7 +6,7 @@ exports.userSchema = joi.object({
   birthOfDate : joi.number().integer().min(1900).max(2023),
   phone: joi.string().regex(/[0-9]/).min(10).max(10).required(),
   email: joi.string().email().required(),
-  password: joi.string().min(8).max(16),
+  password: joi.string().min(8).max(16)
 });
 
 exports.loginSchema = joi.object({

@@ -8,10 +8,10 @@ const userSchema = new mongoose.Schema(
     gender: { type: String, enum: ["Male", "Female", "other"] },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    phoneNumber: { type: String, required: true, unique: true },
-    profileImage: { type: String },
+    phone: { type: String, required: true, unique: true },
+    profileImage: { type: String ,default:"carpet.jpg"},
   },
   { timestamps: true }
 );
 
-module.export = mongoose.model("User", userSchema);
+module.exports = mongoose.model("Userm", userSchema);
